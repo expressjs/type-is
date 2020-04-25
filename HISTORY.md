@@ -1,5 +1,5 @@
-unreleased
-==========
+1.6.19 / 2020-04-24
+===================
 
   * deps: mime-types@~2.1.27
     - Add `application/toml` with extension `.toml`
