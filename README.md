@@ -8,14 +8,14 @@
 
 Infer the content-type of a request.
 
-### Install
+## Install
 
 This is a [Node.js](https://nodejs.org/en/) module available through the
 [npm registry](https://www.npmjs.com/). Installation is done using the
 [`npm install` command](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
 
 ```sh
-$ npm install type-is
+npm install type-is
 ```
 
 ## API
@@ -30,7 +30,7 @@ http.createServer(function (req, res) {
 })
 ```
 
-### typeis(request, types)
+### `typeis(request, types)`
 
 Checks if the `request` is one of the `types`. If the request has no body,
 even if there is a `Content-Type` header, then `null` is returned. If the
@@ -65,7 +65,7 @@ typeis(req, ['application/json']) // => 'application/json'
 typeis(req, ['html']) // => false
 ```
 
-### typeis.hasBody(request)
+### `typeis.hasBody(request)`
 
 Returns a Boolean if the given `request` has a body, regardless of the
 `Content-Type` header.
@@ -86,7 +86,7 @@ if (typeis.hasBody(req)) {
 }
 ```
 
-### typeis.is(mediaType, types)
+### `typeis.is(mediaType, types)`
 
 Checks if the `mediaType` is one of the `types`. If the `mediaType` is invalid
 or does not matches any of the `types`, then `false` is returned. Otherwise, a
